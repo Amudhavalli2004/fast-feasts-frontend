@@ -15,11 +15,10 @@ const UsernameMenu = () => {
   const handleLogout = () => {
     const returnToUrl = import.meta.env.VITE_AUTH0_CALLBACK_URL; // Replace with your actual Render app URL
     console.log("Logging out, redirecting to:", returnToUrl);
-    console.log(process.env.VITE_AUTH0_CALLBACK_URL)
     logout({
       logoutParams: 
       {
-      returnTo: process.env.VITE_AUTH0_CALLBACK_URL,
+      returnTo: import.meta.env.VITE_AUTH0_CALLBACK_URL,
       }
     });
   };
