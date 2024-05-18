@@ -13,7 +13,7 @@ import { Button } from "./ui/button";
 const UsernameMenu = () => {
   const { user, logout } = useAuth0();
   const handleLogout = () => {
-    const returnToUrl = "https://your-render-app-url.com"; // Replace with your actual Render app URL
+    const returnToUrl = process.env.VITE_AUTH0_CALLBACK_URL; // Replace with your actual Render app URL
     console.log("Logging out, redirecting to:", returnToUrl);
     console.log(process.env.VITE_AUTH0_CALLBACK_URL)
     logout({
