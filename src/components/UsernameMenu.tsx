@@ -14,8 +14,9 @@ const UsernameMenu = () => {
   const { user, logout } = useAuth0();
   const handleLogout = () => {
     logout({
+      
       logoutParams: {
-      returnTo: process.env.VITE_AUTH0_CALLBACK_URL,
+      returnToUrl: process.env.VITE_AUTH0_CALLBACK_URL,
       }
     });
   };
